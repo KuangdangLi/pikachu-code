@@ -1,0 +1,84 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div class="button">
+        <button id="btnPause">暂停</button>
+        <button id="btnPlay">播放</button>
+        <button id="btnSlow">慢速</button>
+        <button id="btnNormal">正常</button>
+        <button id="btnFast">快速</button>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;   
+        }
+        ::after,::before{
+            box-sizing: border-box;
+        }
+        .button {
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .button > button {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        #demo1{
+            position: fixed;
+            width: 100%;
+            height: 50vh;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+        #demo1::-webkit-scrollbar{
+            display: none;
+        }
+        #demo2{
+            display: none;
+        }
+        #html{
+            position: fixed;
+            width: 100%;
+            height: 50vh;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
+    <div id="html">
+        <div class="skin">
+            <div class="eyes left"></div>
+            <div class="eyes right"></div>
+            <div class="nose">
+                <div class="yuan"></div>
+            </div>
+            <div class="cheek left"></div>
+            <div class="cheek right"></div>
+            <div class="mouth">
+                <div class="up">
+                    <div class="lip left"></div>
+                    <div class="lip right"></div>
+                </div>
+                <div class="down">
+                    <div class="cir1">
+                        <div class="cir2"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
